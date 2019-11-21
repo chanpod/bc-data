@@ -1,7 +1,5 @@
 module.exports = {    
     username: String,
-    password: String,
-    salt: String,
     email: String,
     firstName: String,
     lastName: String,
