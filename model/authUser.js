@@ -1,7 +1,7 @@
 var mongoose = require('mongoose'),
-    modelName = 'authUser',
-    schemaDefinition = require('../schema/' + modelName),
-    schemaInstance = mongoose.Schema(schemaDefinition, { collection: 'users' }),
-    modelInstance = mongoose.model(modelName, schemaInstance);
+	modelName = 'user',
+	schemaDefinition = require('../schema/authUser'),
+	schemaInstance = mongoose.Schema(schemaDefinition),
+	modelInstance = mongoose.model(modelName, schemaInstance);
 
 module.exports = modelInstance;
