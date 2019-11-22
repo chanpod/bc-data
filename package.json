@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/chanpod/bc-data#readme",
   "dependencies": {
-    "mongoose": "^4.13.19"
+    "mongoose": "^5.7.11"
   }
 }
