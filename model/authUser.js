@@ -1,13 +1,18 @@
 var mongoose = require('mongoose'),
     modelName = 'user',
-    schemaDefinition = require('../schema/' + modelName);
+    userSchemaDefinition = require('../schema/' + modelName);
 
-var schemaInstance = mongoose.Schema(schemaDefinition);
 
-schemaInstance.add({
+var authSchemaDefinition = {
     password: String,
     salt: String
-})
-var modelInstance = mongoose.model("authUser", schemaInstance, 'user');
+};
+
+var userSchema = mongoose.Schema({
+    ...authSchemaDefinition,
+    ...userSchemaDefinition
+});
+
+var modelInstance = mongoose.model("authUser", userSchema, 'users');
 
 module.exports = modelInstance;
