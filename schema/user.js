@@ -7,5 +7,6 @@ module.exports = {
     lastName: String,
     createdOn: Date,
     updatedOn: Date,
-    scopes: [String]
+    scopes: [String],
+    clients: [String]
 };
